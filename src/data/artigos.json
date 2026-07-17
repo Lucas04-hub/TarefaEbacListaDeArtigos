@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "primeiro-artigo",
+    "titulo": "Meu Primeiro Artigo",
+    "autor": "Lucas Ribeiro",
+    "data": "2024-07-17",
+    "conteudo": "Este é o conteúdo do meu primeiro artigo!"
+  },
+  {
+    "slug": "segundo-artigo",
+    "titulo": "Novo Artigo Sobre Next.js",
+    "autor": "Lucas Ribeiro",
+    "data": "2024-07-18",
+    "conteudo": "Aprenda a criar rotas dinâmicas e SEO com Next.js!"
+  }
+]

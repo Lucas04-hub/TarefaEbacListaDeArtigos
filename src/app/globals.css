@@ -1,0 +1,56 @@
+
+
+body {
+  background: #fff;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.azul-topo, .azul-base {
+  width: 100%;
+  height: 25px;
+  background: #1566d6;
+}
+
+.centralize-tudo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* Quadrado grande, central, nunca tocando nas bordas */
+.central-container {
+  width: 90vw;            /* largura responsiva, nunca encosta nas laterais */
+  height: 60vh;           /* altura generosa, ajusta conforme tela */
+  max-width: 640px;       /* nunca fica grande demais */
+  max-height: 640px;      /* proporção quase quadrada */
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.09);
+  border: 1px solid #e5e5e5;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.lista-artigos-titulo {
+  background: linear-gradient(90deg, #69e0ff 0%, #2196f3 100%); /* Ciano para azul */
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px 40px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px rgba(33,150,243,0.08);
+  display: inline-block;
+}
