@@ -1,11 +1,11 @@
-import { getArtigoPorSlug } from '../../artigos';
+import { getArtigoPorSlug, getSlugs } from '../../artigos'; // ajuste o caminho se necessário
 import type { Metadata } from 'next';
 
 interface ArtigoPageProps {
   params: { slug: string }
 }
 
-// Função para gerar o SEO dinâmico
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const artigo = await getArtigoPorSlug(params.slug);
 
@@ -18,8 +18,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   return {
     title: artigo.titulo,
-    description: artigo.conteudo.slice(0, 120) // Pega um resumo do conteúdo
+    description: artigo.conteudo.slice(0, 120)
   };
+}
+
+
+export async function generateStaticParams() {
+  const slugs = await getSlugs();
+  return slugs;
 }
 
 export default async function ArtigoPage({ params }: ArtigoPageProps) {
